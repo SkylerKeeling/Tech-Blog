@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS inventoryDB;
+CREATE DATABASE inventoryDB;
