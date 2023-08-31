@@ -21,7 +21,14 @@ Post.init(
     },
     date: {
       type: DataTypes.DATE,
-      allowNull: false,
+      //allowNull: false,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: "user",
+        key: "id",
+      },
     },
   },
   {

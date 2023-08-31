@@ -7,14 +7,16 @@ router.get("/", async (req, res) => {
       include: [
         {
           model: User,
-          attributes: ["title", "caption", "date"],
+          attributes: ["username", "email", "password"],
         },
       ],
     })
 
     const post = dbPostData.map(post => post.get({plain: true}))
 
-    res.render("post", {
+    console.log(post)
+
+    res.render("all", {
       post,
     })
   } catch (err) {
@@ -23,4 +25,12 @@ router.get("/", async (req, res) => {
   }
 })
 
+// router.get("/post", async (req, res) => {
+//   try {
+//     res.render("post")
+//   } catch (err) {
+//     console.log(err)
+//     res.status(500).json(err)
+//   }
+// })
 module.exports = router

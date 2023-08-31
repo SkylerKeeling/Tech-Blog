@@ -11,6 +11,10 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -19,16 +23,16 @@ User.init(
       type: DataTypes.STRING,
       allowNull: false,
     },
-    created_date: {
-      type: DataTypes.DATE,
-      allowNull: false,
-    },
+    // created_date: {
+    //   type: DataTypes.DATE,
+    //   allowNull: false,
+    // },
   },
   {
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: "gallery",
+    modelName: "user",
   }
 )
 

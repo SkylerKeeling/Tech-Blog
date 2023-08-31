@@ -1,12 +1,13 @@
 const {Post} = require("../models")
-const currentDate = dayjs()
+const dayjs = require("dayjs")
 
 const testPostOneData = [
   {
     title: "Testing",
     caption:
       "testingtestingtestingtestingtestingtestingtestingtestingtestingtesting",
-    date: currentDate,
+    date: dayjs(),
+    user_id: 1,
   },
 ]
 
