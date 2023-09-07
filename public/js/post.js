@@ -4,19 +4,23 @@ const newFormHandler = async function (event) {
   const title = document.querySelector("#titleInput").value
   const caption = document.querySelector("#captionInput").value
 
-  const newPost = await fetch(`/api/post`, {
+  console.log(title, caption)
+
+  await fetch("/api/posts", {
     method: "POST",
     body: JSON.stringify({
       title,
       caption,
     }),
-  })
 
-  if (newPost.ok) {
-    document.location.replace("/")
-  } else {
-    alert("Failed to create post")
-  }
+    headers: {"Content-Type": "application/json"},
+  })
+  console.log(title, caption)
+  //if (response.ok) {
+  //document.location.replace("/")
+  // } else {
+  //   alert("Failed to create post")
+  // }
 }
 
 document

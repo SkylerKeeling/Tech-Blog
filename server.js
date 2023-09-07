@@ -22,6 +22,6 @@ app.listen(PORT, () => {
   sequelize.sync({force: false})
 })
 
-app.post("/post", (request, response) => {
-  console.log(request.body.bodydata)
-})
+// app.post("/post", (request, response) => {
+//   console.log(request.body.bodydata)
+// })

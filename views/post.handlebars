@@ -1,12 +1,12 @@
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="/js/post.js"></script>
 
 <div class="heading text-center font-bold text-2xl m-5 text-gray-800">New Post</div>
 <style>
   body {background:white !important;}
 </style>
-<div
+<form
   class="editor mx-auto w-10/12 flex flex-col text-gray-800 border border-gray-300 p-4 shadow-lg max-w-2xl"
+  id="new-post-form"
 >
   <input
     class="title bg-gray-100 border border-gray-300 p-2 mb-4 outline-none"
@@ -26,8 +26,11 @@
     <div
       class="btn border border-gray-300 p-1 px-4 mt-1 font-semibold cursor-pointer text-gray-500 ml-auto"
     >Cancel</div>
-    <div
+    <button
       class="btn border border-indigo-500 p-1 px-4 mt-1 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500"
-    >Post</div>
+      type="submit"
+    >Post</button>
   </div>
-</div>
+</form>
+
+<script src="/js/post.js"></script>
