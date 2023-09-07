@@ -19,7 +19,6 @@ router.get("/", async (req, res) => {
     res.render("all", {
       post,
     })
-    res.render("partials/postInput")
   } catch (err) {
     console.log(err)
     res.status(500).json(err)
