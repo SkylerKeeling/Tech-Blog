@@ -18,6 +18,7 @@ router.get("/", async (req, res) => {
 
     res.render("all", {
       post,
+      logged_in: req.session.logged_in,
     })
   } catch (err) {
     console.log(err)
@@ -40,7 +41,7 @@ router.get("/login", (req, res) => {
     return
   }
 
-  res.render("login")
+  res.render("signup")
 })
 
 module.exports = router
