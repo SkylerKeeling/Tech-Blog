@@ -9,6 +9,10 @@ const logout = async () => {
   } else {
     alert(response.statusText)
   }
+
+  console.log("logout clicked")
 }
 
-document.querySelector("#logout").addEventListener("click", logout)
+document
+  .querySelector("#logout")
+  .addEventListener("click", logout, console.log("logout clicked"))
